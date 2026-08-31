@@ -35,11 +35,11 @@ jobs:
     - name: Send Email
       uses: dawidd6/action-send-mail@v3
       with:
-        server_address: smtp.gmail.com
-        server_port: 465
+        server_address: ${{ secrets.EMAIL_SERVER_ADDRESS }}
+        server_port: ${{ secrets.EMAIL_SERVER_PORT }}
         secure: true
-        username: samuel.pelletier.06.37.57.34.89@gmail.com
-        password: XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+        username: ${{ secrets.EMAIL_ADDRESS }}
+        password: ${{ secrets.EMAIL_PASSWORD }}
         subject: Github Actions job result
         to: samuel.pelletier.06.37.57.34.89@gmail.com
         from: GitHubActions
