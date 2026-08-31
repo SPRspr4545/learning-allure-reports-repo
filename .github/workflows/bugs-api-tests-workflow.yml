@@ -40,7 +40,7 @@ jobs:
         secure: true
         username: ${{ secrets.EMAIL_ADDRESS }}
         password: ${{ secrets.EMAIL_PASSWORD }}
-        subject: Github Actions job result
+        subject: Github Actions AllureReports
         to: samuel.pelletier.06.37.57.34.89@gmail.com
         from: GitHubActions
         body: All the tests for ${{github.repository}} are completed!
