@@ -44,4 +44,4 @@ jobs:
         to: samuel.pelletier.06.37.57.34.89@gmail.com
         from: GitHubActions
         body: All the tests for ${{github.repository}} are completed!
-        attachments: target/surefire-reports/emailable-report.html
+        attachments: allure-report/index.html
