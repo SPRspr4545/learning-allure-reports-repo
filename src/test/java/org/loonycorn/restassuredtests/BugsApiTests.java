@@ -27,14 +27,14 @@ public class BugsApiTests {
     @BeforeSuite
     void setup() {
         // Dans GitHub Action, utiliser l'url NGROK pour exposer baseURI sur internet:
-        //RestAssured.baseURI = "https://xxxxxxxxxxxxxxx.ngrok-free.app/";
-        RestAssured.baseURI = "http://localhost:8090";
+        RestAssured.baseURI = "https://7b79-93-15-194-69.ngrok-free.app/";
+        //RestAssured.baseURI = "http://localhost:8090";
         RestAssured.basePath = "bugs";
 
         RestAssured.requestSpecification = new RequestSpecBuilder()
                 .setContentType(ContentType.JSON)
                 // ajouter également une entête pour contourner l'avertissement NGROK
-                //.addHeader("ngrok-skip-browser-warning", "true")
+                .addHeader("ngrok-skip-browser-warning", "true")
                 .build();
     }
 
